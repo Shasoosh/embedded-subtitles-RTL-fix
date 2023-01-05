@@ -51,8 +51,8 @@ def FixOneLine(s):
     directionalFormatting2b = '\u202b'
 
     # Amazon started adding "Pop Directional Formatting" - we are removing all of them from each line and replacing them.
+    s = s.replace('\u202c', '')
     s = s.replace(directionalFormatting2b, '')
-    s = s.replace('\u202b', '')
     
     return directionalFormatting2b + s 
 
